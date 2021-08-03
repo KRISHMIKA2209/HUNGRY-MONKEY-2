@@ -222,7 +222,10 @@ function draw()
   }
   if(monkey.isTouching(obsGroup))
   {
-   gameState=END
+   chances = chances-1;
+  }
+  if(chances== 0){
+  gameState = END
   }
   else if(gameState===END)
   {
