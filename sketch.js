@@ -220,6 +220,10 @@ function draw()
     food();
     bonusFood();
   }
+  if(monkey.isTouching(obsGroup))
+  {
+   gameState=END
+  }
   else if(gameState===END)
   {
     //To make restart & game Over invisible
@@ -235,6 +239,7 @@ function draw()
     obsGroup.setVelocityEach(0);
     obsGroup.destroyEach();
   }
+  
   
   if(ground.x<0)
   {
